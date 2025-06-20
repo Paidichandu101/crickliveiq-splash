@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrickLiveIQ - Launch</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: black;
+    }
+
+    .splash-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logo-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1s forwards;
+    }
+
+    .logo-overlay img {
+      width: 220px;
+      filter: drop-shadow(0 0 15px #00ffc8);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="splash-container">
+    <video autoplay muted playsinline>
+      <source src="splash.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="logo-overlay">
+      <img src="crickliveiq_logo.png" alt="CrickLiveIQ Logo">
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html"; // your app's home screen
+    }, 5000); // 5 seconds delay
+  </script>
+
+</body>
+</html>
